@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<conio.h>
+
+typedef struct Employee{
+
+		int code;
+		char name[20];
+		int bouns;
+		int deduct;
+		float salary;
+		float netSalary;
+	};
+
+void addEmployee(){
+	
+	int x=10,y=5;
+	struct Employee emp1;
+	gotoxy(x,y);
+	printf("%-10s","code:");
+	scanf("%d",&emp1.code);
+	gotoxy(x+30,y);
+	printf("%-10s","name:");
+	scanf("%s",&emp1.name);
+
+	printf("\n");
+
+	gotoxy(x,y+=5);
+	printf("%-10s","bouns:");
+	scanf("%d",&emp1.bouns);
+	gotoxy(x+30,y);
+	printf("%-10s","deduct:");
+	scanf("%d",&emp1.deduct);
+
+	printf("\n");
+
+	gotoxy(x,y+=5);
+	printf("%-10s","salary:");
+	scanf("%f",&emp1.salary);
+	gotoxy(x+30,y);
+	printf("%-10s","netSal:");
+	printf("%f",emp1.salary+emp1.bouns-emp1.deduct);
+
+
+}
+
+void main(){
+
+
+	addEmployee();
+
+
+   //	printf("%d,%s",emp1.code,emp1.name);
+	getch();
+	clrscr();
+
+	
+	
+}
