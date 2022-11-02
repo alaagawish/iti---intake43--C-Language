@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main(){
+
+	int x=36,y=11;
+	int number;
+
+	gotoxy(x,y);
+	printf("1)NEW\n");
+
+	gotoxy(x,y+1);
+	printf("2)DISPLAY\n");
+
+	gotoxy(x,y+2);
+	printf("3)EXIT\n");
+
+	gotoxy(x,y+3);
+	printf("choose number");
+	scanf("%d",&number);
+
+	if(number==1){
+		clrscr();
+		gotoxy(36,13);
+		printf("NEW");
+	}
+	else if (number==2){
+		clrscr();
+		gotoxy(36,13);
+		printf("DISPLAY");
+	}
+	else if (number==3)
+		clrscr();
+
+	else
+		getch();
+
+	getch();
+	clrscr();
+
+
+
+}

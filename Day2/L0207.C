@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+void main(){
+
+
+	float numbers[5];
+
+	int i=0;
+	float max,min;
+
+	printf("Enter 5 numbers:\n");
+	scanf("%f",&numbers[0]);
+	max=numbers[0];
+
+	min=numbers[0];
+
+	for(i=1;i<5;i++){
+
+		scanf("%f",&numbers[i]);
+		if(max<numbers[i])
+			max=numbers[i];
+
+		if(min>numbers[i])
+			min=numbers[i];
+
+
+	}
+
+	printf("max number =%f\nmin number =%f",max,min);
+
+	getch();
+
+	clrscr();
+}

@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+void main(){
+
+
+	int number;
+	int sum=0;
+
+	while(sum<100){
+
+
+		scanf("%d",&number);
+		sum+=number;
+		printf("SUM=%d\n",sum);
+
+	}
+    getch();
+	clrscr();
+
+
+
+
+
+}
