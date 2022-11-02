@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<string.h>
+
+void main (){
+
+
+	int number=15;
+	float num=12.222;
+
+
+//integer
+	printf("%d %i\n",10,20000);
+
+//octal ,decimal,hexa
+	printf("octal=%o \ndecimal=%u \nhexa=%x \n ",number,number,number);
+
+//floating
+
+	printf("Float=%f \n",num);
+
+//exp
+	printf("EXPONENTIAL=%e \n",1000000000000000000000);
+
+
+
+
+
+ //char
+
+	printf("char:%c \n",'x');
+
+
+ //pointer
+	printf("pointer :%p and %p \n",number,num);
+
+
+ // %
+	printf("%");
+
+	getch();
+
+ 	clrscr();
+
+}
