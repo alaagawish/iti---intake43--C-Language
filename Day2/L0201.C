@@ -1,52 +1,45 @@
 #include<stdio.h>
 #include<conio.h>
 
+
 void main(){
 
+	int x,y,i,row,column;
+	int dim=5,currNum=1;
 
-	int x=40,y=8;
 
-	int dim=3,i=1;
-	int currNum=1;
+	x=dim-(dim-1)/2;
+	row=80/(dim+1);
+	column=25/dim;
+	y=1;
 	clrscr();
-	gotoxy(x,y);
-	printf("%d",currNum);
+	gotoxy(x*row,y*column);
+	printf("%d",1);
 
-	for(i=2;i<10;i++){
-		if (currNum % dim !=0 ){
+	for(i=1;i<dim*dim;i++){
+		if (i%dim != 0){
+			x--;
+			y--;
+			if(x==0)
+				x=dim;
+			if(y==0)
+				y=dim;
 
-			if(	x>=40)
-				x-=27;
-			else if(x==13)
-				x+=54;
-			if(	y==8)
-				y+=16 ;
-			else
-				y-=8;
-
-			gotoxy(x,y);
-			currNum+=1;
-			printf("%d",currNum);
+			gotoxy(x*row,y*column);
+			printf("%d",i+1);
 
 		}
 		else{
-
-			if(y==16 || y==8)
-				y+=8;
-
-
+			if(y==dim)
+				y=1;
 			else
-				y-=16;
-			gotoxy(x,y);
-			printf( "%d",++currNum);
+				y++;
+
+			gotoxy(x*row,y*column);
+			printf("%d",i+1);
 
 		}
 
+	  }
+	  getch();
 	}
-
-
-		getch();
-		clrscr();
-
-
-}
